@@ -1,7 +1,19 @@
+import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
+
+    const {logIn, googleLogIn} = useContext(AuthContext);
+
+    const handleLogIn = e => {
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+    }
+
   return (
     <div className="w-[90%] md:w-[60%] lg:w-[40%] p-3 md:p-8 mt-5 md:mt-8 lg:mt-12 rounded-lg border-2 mx-auto ">
       <h2 className="text-2xl font-bold md:text-4xl mb-5">Please Log In</h2>
