@@ -3,6 +3,8 @@ import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase.config";
 
 
 const Register = () => {
@@ -22,14 +24,24 @@ const Register = () => {
 
         createUser(email, password)
         .then(result => {
-            setUser(result.user)
-            console.log(result.user);
-            toast.success('User Created Successfully')
-
-            navigate('/login')
+            
+            updateProfile(auth.currentUser, {
+                displayName: name , 
+                photoURL: photo
+              })
+              .then(() => {
+                toast.success('User Created Successfully')
+                setUser(result.user)
+                navigate('/login')
+              })
+              .catch((error) => {
+                toast.error(error.message)
+                console.log(error.message);
+              });
+            
         })
         .catch(error => {
-            toast.error({error})
+            toast.error(error.message)
         })
     }
 
@@ -37,9 +49,7 @@ const Register = () => {
         googleLogIn()
         .then(result => {
             setUser(result.user)
-            console.log(result.user);
             toast.success('User Created Successfully')
-
             navigate('/login')
         })
         .catch(error => {

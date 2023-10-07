@@ -1,12 +1,32 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
+  const { user,logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+    .then(res => {
+      console.log(res);
+      toast.success('Log Out Successfully')
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }
+
   const NavLinks = (
     <>
       <NavLink
         to="/"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active underline text-red-700 font-semibold" : ""
+          isPending
+            ? "pending"
+            : isActive
+            ? "active underline text-red-700 font-semibold"
+            : ""
         }
       >
         Home
@@ -14,7 +34,11 @@ const NavBar = () => {
       <NavLink
         to="/orders"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active underline text-red-700 font-semibold" : ""
+          isPending
+            ? "pending"
+            : isActive
+            ? "active underline text-red-700 font-semibold"
+            : ""
         }
       >
         Orders
@@ -22,7 +46,11 @@ const NavBar = () => {
       <NavLink
         to="/about"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active underline text-red-700 font-semibold" : ""
+          isPending
+            ? "pending"
+            : isActive
+            ? "active underline text-red-700 font-semibold"
+            : ""
         }
       >
         About Us
@@ -30,7 +58,11 @@ const NavBar = () => {
       <NavLink
         to="/contact"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active underline text-red-700 font-semibold" : ""
+          isPending
+            ? "pending"
+            : isActive
+            ? "active underline text-red-700 font-semibold"
+            : ""
         }
       >
         Contact
@@ -70,9 +102,26 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-7">{NavLinks}</ul>
         </div>
-        <div className="navbar-end flex items-center gap-6">
-            <img className="w-12 h-12 rounded-full" src="" alt="" />
-          <Link to={'/login'}><button className="btn">Log In</button></Link>
+        <div className="navbar-end ">
+          {user ? (
+            <div className="flex items-center gap-6">
+              <img
+                className="w-12 h-12 rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+              <Link to={"/login"}>
+                <button onClick={handleLogOut} className="btn btn-primary">Sign Out</button>
+              </Link>
+            </div>
+          ) : (
+            <div className="navbar-end flex items-center gap-6">
+              <img className="w-12 h-12 rounded-full" src="" alt="" />
+              <Link to={"/login"}>
+                <button className="btn btn-primary">Log In</button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,23 +1,45 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+    const [user, setUser] = useState(null)
 
-    const {logIn, googleLogIn} = useContext(AuthContext);
+    const {logInUser, googleLogIn} = useContext(AuthContext);
 
-    const handleLogIn = e => {
-        e.preventDefault()
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        console.log(email, password);
+    const handleLogInUser = e => {
+      e.preventDefault()
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+      console.log(email, password);
+
+      logInUser(email, password)
+      .then(res => {
+        console.log(res.user);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+
+    }
+
+    const handleGoogleLogIn = () => {
+        googleLogIn()
+        .then(res => {
+            setUser(res.user)
+            toast.success('User Logged In Successfully')
+        })
+        .catch(err => {
+            toast.error(err.message)
+        })
     }
 
   return (
     <div className="w-[90%] md:w-[60%] lg:w-[40%] p-3 md:p-8 mt-5 md:mt-8 lg:mt-12 rounded-lg border-2 mx-auto ">
       <h2 className="text-2xl font-bold md:text-4xl mb-5">Please Log In</h2>
-      <form>
+      <form onSubmit={handleLogInUser}>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -46,11 +68,12 @@ const Login = () => {
             <button className="w-full py-3 px-5 bg-blue-600 text-white font-bold rounded-lg">Log In</button>
         </div>
         <p>New to Event MAMA? Please <Link className="text-blue-600 hover:underline font-bold" to={'/register'}>Register</Link></p>
-        <div className="flex items-center py-2 px-6 border-2 border-blue-600 mt-5 rounded-xl gap-3 text-center justify-center">
-        <span className="text-2xl text-blue-600"><FaGoogle></FaGoogle></span>
-            <h2 className="text-1xl font-bold"> Google</h2>
-        </div>
+        
       </form>
+      <div className="flex items-center py-2 px-6 border-2 border-blue-600 mt-5 rounded-xl gap-3 text-center justify-center">
+        <button onClick={handleGoogleLogIn} className="text-2xl text-blue-600"><FaGoogle></FaGoogle> Google</button>
+            
+        </div>
     </div>
   );
 };

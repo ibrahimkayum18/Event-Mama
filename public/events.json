@@ -1,92 +1,63 @@
 [
     {
+     "id":1, 
     "name": "Epic Rock Fest 2023",
     "venue": "Music Palace",
     "date": "2023-12-10",
     "time": "20:00",
     "ticket_price": 45.00,
-    "image": "rock_fest_2023.jpg",
+    "image": "https://i.ibb.co/dfnsyVN/download-3.jpg",
     "description": "Join us for an epic night of rock music featuring some of the biggest bands in the industry. It's going to be a night you won't forget!"
   },
   {
+  "id":2, 
     "name": "Pop Sensation Night",
     "venue": "Starlight Arena",
     "date": "2023-11-25",
     "time": "19:30",
     "ticket_price": 55.00,
-    "image": "pop_sensation_night.jpg",
+    "image": "https://i.ibb.co/jVY3bP9/download-4.jpg",
     "description": "Get ready for a dazzling night of pop music with chart-topping artists. Sing along to your favorite hits!"
   },
   {
+  "id":3, 
     "name": "Jazz in the Park",
     "venue": "City Park Amphitheater",
     "date": "2023-09-18",
     "time": "17:00",
     "ticket_price": 30.00,
-    "image": "jazz_in_the_park.jpg",
+    "image": "https://i.ibb.co/h8wstJR/download-5.jpg",
     "description": "Relax and unwind with soothing jazz melodies in the beautiful setting of City Park."
   },
   {
+    "id":4, 
     "name": "Country Jamboree 2023",
     "venue": "Rodeo Ranch",
     "date": "2023-10-08",
     "time": "16:30",
     "ticket_price": 40.00,
-    "image": "country_jamboree_2023.jpg",
+    "image": "https://i.ibb.co/SBkFN5x/download-6.jpg",
     "description": "Dust off your cowboy boots and enjoy a night of country music and line dancing."
   },
+
   {
-    "name": "Indie Night Out",
-    "venue": "The Underground",
-    "date": "2023-11-02",
-    "time": "21:00",
-    "ticket_price": 35.00,
-    "image": "indie_night_out.jpg",
-    "description": "Discover the latest indie music talent in an intimate underground setting."
-  },
-  {
+    "id":5, 
     "name": "R&B Groove Fest",
     "venue": "Soulful Theater",
     "date": "2023-10-30",
     "time": "18:30",
     "ticket_price": 50.00,
-    "image": "rnb_groove_fest.jpg",
+    "image": "https://i.ibb.co/QC14Nsy/download-10.jpg",
     "description": "Get ready to groove to the smooth sounds of R&B and soul music."
   },
   {
+    "id":6, 
     "name": "Classical Concert Series",
     "venue": "Symphony Hall",
     "date": "2023-09-25",
     "time": "15:00",
     "ticket_price": 25.00,
-    "image": "classical_concert_series.jpg",
+    "image": "https://i.ibb.co/crM2Km7/download-11.jpg",
     "description": "Experience the timeless beauty of classical music performed by a world-class orchestra."
-  },
-  {
-    "name": "Electronic Dance Party",
-    "venue": "Club Vibes",
-    "date": "2023-11-12",
-    "time": "22:00",
-    "ticket_price": 60.00,
-    "image": "electronic_dance_party.jpg",
-    "description": "Dance the night away to the hottest electronic beats at Club Vibes."
-  },
-  {
-    "name": "Latin Fiesta Extravaganza",
-    "venue": "Salsa Central",
-    "date": "2023-10-15",
-    "time": "20:30",
-    "ticket_price": 40.00,
-    "image": "latin_fiesta_extravaganza.jpg",
-    "description": "Experience the fiery passion of Latin music and dance at Salsa Central."
-  },
-  {
-    "name": "Acoustic Folk Night",
-    "venue": "Cozy Cafe",
-    "date": "2023-09-10",
-    "time": "19:00",
-    "ticket_price": 20.00,
-    "image": "acoustic_folk_night.jpg",
-    "description": "Savor the warmth of acoustic folk music in the cozy atmosphere of Cozy Cafe."
   }
 ]
