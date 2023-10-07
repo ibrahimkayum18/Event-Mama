@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { FaBookDead } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -19,7 +21,28 @@ const EventDetails = () => {
         }
     },[events, intId])
 
-    const handle
+    const handleBooking = () => {
+        const localData = [];
+
+        const BookingData = JSON.parse(localStorage.getItem('booked'))
+        if(!BookingData){
+            localData.push(selectedEvent)
+            localStorage.setItem('booked', JSON.stringify(localData))
+            toast.success('Congratulations, You have Booked this event')
+        }
+        else{
+            const isExist = BookingData.find(data => data.id === intId)
+            if (isExist) {
+                toast.error('Already Booked')
+            }
+            else{
+                localData.push(...BookingData, selectedEvent);
+                localStorage.setItem('booked', JSON.stringify(localData));
+                toast.success('Congratulation, You Booked this event')
+            }
+        }
+
+    }
     
     return (
         <div >
@@ -35,7 +58,7 @@ const EventDetails = () => {
                     <p><span className="font-bold">Time:</span> {time}</p>
                     <p>{description}</p>
                     <div className="mt-10">
-                        <button className="btn btn-primary">Book This Event</button>
+                        <button onClick={handleBooking} className="btn btn-primary">Book This Event for ${ticket_price}</button>
                     </div>
                 </div>
             </div>

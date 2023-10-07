@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import ErrprPage from "./Components/ErrorPage/ErrprPage";
 import Home from "./Pages/Home";
-import Orders from "./Pages/Orders";
+import Orders from "./Pages/Booking";
 import Login from "./Pages/Login";
 import Contact from "./Pages/Contact";
 import Register from "./Pages/Register";
 import About from "./Pages/About";
 import EventDetails from "./Pages/EventDetails";
+import Booking from "./Pages/Booking";
 
 
 const Route = createBrowserRouter([
@@ -22,8 +23,8 @@ const Route = createBrowserRouter([
                 loader: () => fetch('/events.json')
             },
             {
-                path:'/orders',
-                element: <Orders></Orders>
+                path:'/booking',
+                element: <Booking></Booking>
             },
             {
                 path:'/about',
