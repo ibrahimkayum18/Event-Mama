@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { FaBookDead } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
+import MarqueeSlider from "../Components/Marquee/MarqueeSlider";
 
 
 const EventDetails = () => {
@@ -46,7 +47,10 @@ const EventDetails = () => {
     
     return (
         <div >
-            <div className="grid md:grid-cols-2 gap-6 mt-14 md:w-[80%] mx-auto item-center bg-base-200">
+            <div className="my-10">
+            <MarqueeSlider></MarqueeSlider>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 my-14 md:w-[80%] mx-auto item-center bg-base-200">
                 <div>
                     <img className="w-full" src={image} alt="" />
                 </div>
@@ -62,6 +66,7 @@ const EventDetails = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

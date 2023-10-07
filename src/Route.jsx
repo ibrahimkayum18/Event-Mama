@@ -33,7 +33,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/contact',
-                element:<Contact></Contact>
+                element:<PrivetRouter><Contact></Contact></PrivetRouter>
             },
             {
                 path:'/login',

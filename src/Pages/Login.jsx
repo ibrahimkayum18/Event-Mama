@@ -1,34 +1,45 @@
 import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-    const [user, setUser] = useState(null)
+  const [loggedUser, setLoggeduser] = useState(null)
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const {logInUser, googleLogIn} = useContext(AuthContext);
+    const {logInUser,user, googleLogIn} = useContext(AuthContext);
 
     const handleLogInUser = e => {
+
       e.preventDefault()
       const email = e.target.email.value;
       const password = e.target.password.value;
-      console.log(email, password);
+
+      // if(user.email !== email){
+      //   return toast.error('email did not match, try again')
+      // }
+      // else if (user.password !== password) {
+      //   return toast.error('Password did not match, try again')
+      // }
 
       logInUser(email, password)
       .then(res => {
-        console.log(res.user);
+        setLoggeduser(res.user)
+        toast.success('User logged in successfully')
+
+        navigate(location?.state ? location.state : '/')
       })
       .catch(error => {
-        console.log(error);
+        toast.error(error.message);
       })
 
     }
 
     const handleGoogleLogIn = () => {
         googleLogIn()
-        .then(res => {
-            setUser(res.user)
+        .then(() => {
             toast.success('User Logged In Successfully')
         })
         .catch(err => {

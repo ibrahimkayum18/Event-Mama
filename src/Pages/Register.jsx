@@ -21,7 +21,15 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-
+        if (password.length > 5) {
+          return toast.error('Password must be less then 6 character')
+        }
+        else if (/[A-Z]/.test(password)) {
+          return toast.error('Password should not contain uppercase character')
+        }
+        else if (/[@$!%*?&]/.test(password)) {
+          return toast.error('Password should not have special character')
+        }
 
 
         createUser(email, password)
