@@ -26,7 +26,7 @@ const Booking = () => {
                     </div>
                 }
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-2 mx-5 md:mx-8 lg:grid-cols-3 gap-5">
                 {
                     show ?
                     allBooking.map(booking => <BookingCart key={booking.id} booking={booking}></BookingCart>)

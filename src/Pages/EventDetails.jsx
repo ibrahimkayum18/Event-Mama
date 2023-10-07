@@ -46,7 +46,7 @@ const EventDetails = () => {
     
     return (
         <div >
-            <div className="grid md:grid-cols-2 gap-6 mt-14 md:w-[80%] mx-auto item-center">
+            <div className="grid md:grid-cols-2 gap-6 mt-14 md:w-[80%] mx-auto item-center bg-base-200">
                 <div>
                     <img className="w-full" src={image} alt="" />
                 </div>

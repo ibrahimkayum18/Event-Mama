@@ -9,6 +9,7 @@ import Register from "./Pages/Register";
 import About from "./Pages/About";
 import EventDetails from "./Pages/EventDetails";
 import Booking from "./Pages/Booking";
+import PrivetRouter from "./Provider/PrivetRouter";
 
 
 const Route = createBrowserRouter([
@@ -24,7 +25,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/booking',
-                element: <Booking></Booking>
+                element: <PrivetRouter><Booking></Booking></PrivetRouter>
             },
             {
                 path:'/about',
@@ -44,7 +45,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/event-details/:id',
-                element:<EventDetails></EventDetails>,
+                element:<PrivetRouter><EventDetails></EventDetails></PrivetRouter>,
                 loader: () => fetch('/events.json')
             }
         ]
