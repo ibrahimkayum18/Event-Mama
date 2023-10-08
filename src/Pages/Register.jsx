@@ -70,7 +70,7 @@ const Register = () => {
     }
 
   return (
-    <div className="w-[90%] md:w-[60%] lg:w-[50%] p-3 md:p-8 mt-5 md:mt-8 lg:mt-12 rounded-lg border-2 mx-auto ">
+    <div className="w-[90%] md:w-[60%] lg:w-[50%] p-3 md:p-8 mt-5 md:mt-8 lg:mt-12 rounded-lg border-2 mx-auto mb-12">
       <h2 className="text-2xl font-bold md:text-4xl mb-5">Please Register</h2>
       <form onSubmit={handleCreateUser}>
         <div className="form-control">

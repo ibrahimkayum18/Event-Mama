@@ -21,7 +21,7 @@ const Home = () => {
               <HomeCard key={event.id} event={event}></HomeCard>
             ))}
           </div>
-          <div className="border" data-aos="fade-up">
+          <div className="" data-aos="fade-up">
                 <RightSideBar></RightSideBar>
           </div>
         </div>

@@ -51,10 +51,10 @@ const EventDetails = () => {
             <MarqueeSlider></MarqueeSlider>
             </div>
             <div className="grid md:grid-cols-2 gap-6 my-14 md:w-[80%] mx-auto item-center bg-base-200" data-aos="flip-left">
-                <div>
+                <div className="mx-5 lg:mx-0">
                     <img className="w-full" src={image} alt="" />
                 </div>
-                <div className="">
+                <div className="mx-5 lg:mx-0">
                     <h1 className="text-4xl"><span className="font-bold">Price: </span>$ {ticket_price}</h1>
                     <h2 className="text-3xl font-bold">{name}</h2>
                     <h3 className="text-2xl font-semibold">Venue: {venue}</h3>

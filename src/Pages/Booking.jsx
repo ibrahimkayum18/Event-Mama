@@ -21,12 +21,12 @@ const Booking = () => {
         <div className="mt-5 md:mt-12">
             <div>
                 {
-                    setAllBooking < 1 && <div className="flex justify-center item-center h-screen">
-                        <h2 className="text-3xl">{noData}</h2>
+                    allBooking.length < 1 && <div className="flex justify-center item-center h-60">
+                        <h2 className="text-2xl">{noData}</h2>
                     </div>
                 }
             </div>
-            <div className="grid md:grid-cols-2 mx-5 md:mx-8 lg:grid-cols-3 gap-5 mx-5 lg:mx-0">
+            <div className="grid md:grid-cols-2 mx-5 md:mx-8 lg:grid-cols-3 gap-5  lg:mx-auto">
                 {
                     show ?
                     allBooking.map(booking => <BookingCart key={booking.id} booking={booking}></BookingCart>)

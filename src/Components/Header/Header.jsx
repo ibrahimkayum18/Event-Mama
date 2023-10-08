@@ -24,15 +24,16 @@ const Header = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div
-            style={{
-              backgroundImage: "url('https://i.ibb.co/qBS4PSq/banner-1.jpg')",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-            className="w-full h-screen flex justify-center item-center"
-          >
-            <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
+        <div>
+            <div style={{
+                backgroundImage: "url('https://i.ibb.co/qBS4PSq/banner-1.jpg')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                position: "relative",
+                overflow: "hidden"
+            }} className="w-full h-screen">
+                <div style={{backgroundColor:"rgba(0,0,0,0.8)"}} className="absolute w-full h-full top-0 left-0">
+                <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Welcome to grand event
               </h2>
@@ -43,11 +44,21 @@ const Header = () => {
                 Choose Your Favorite Events
               </button>
             </div>
-          </div>
+                </div>
+            </div>
+        </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full h-screen bg-[#063970] flex justify-center">
-            <div className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
+        <div>
+            <div style={{
+                backgroundImage: "url('https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                position: "relative",
+                overflow: "hidden"
+            }} className="w-full h-screen">
+                <div style={{backgroundColor:"rgba(0,0,0,0.8)"}} className="absolute w-full h-full top-0 left-0">
+                <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Welcome to grand event
               </h2>
@@ -58,11 +69,21 @@ const Header = () => {
                 Choose Your Favorite Events
               </button>
             </div>
-          </div>
+                </div>
+            </div>
+        </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full h-screen bg-[#004a2b] flex justify-center">
-            <div className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
+        <div>
+            <div style={{
+                backgroundImage: "url('https://images.pexels.com/photos/2257474/pexels-photo-2257474.jpeg?auto=compress&cs=tinysrgb&w=600')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                position: "relative",
+                overflow: "hidden"
+            }} className="w-full h-screen">
+                <div style={{backgroundColor:"rgba(0,0,0,0.8)"}} className="absolute w-full h-full top-0 left-0">
+                <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Welcome to grand event
               </h2>
@@ -73,11 +94,21 @@ const Header = () => {
                 Choose Your Favorite Events
               </button>
             </div>
-          </div>
+                </div>
+            </div>
+        </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full h-screen bg-gray-400 flex justify-center">
-            <div className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
+        <div>
+            <div style={{
+                backgroundImage: "url('https://images.pexels.com/photos/2417730/pexels-photo-2417730.jpeg?auto=compress&cs=tinysrgb&w=600')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                position: "relative",
+                overflow: "hidden"
+            }} className="w-full h-screen">
+                <div style={{backgroundColor:"rgba(0,0,0,0.8)"}} className="absolute w-full h-full top-0 left-0">
+                <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Welcome to grand event
               </h2>
@@ -88,7 +119,9 @@ const Header = () => {
                 Choose Your Favorite Events
               </button>
             </div>
-          </div>
+                </div>
+            </div>
+        </div>
         </SwiperSlide>
       </Swiper>
     </div>

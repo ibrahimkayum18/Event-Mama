@@ -41,7 +41,7 @@ const NavBar = () => {
             : ""
         }
       >
-        Booking
+        Booked
       </NavLink>
       <NavLink
         to="/about"
@@ -109,7 +109,7 @@ const NavBar = () => {
             className="w-12 h-12 rounded-full"
             tabIndex={0}
               alt="" />
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+            <ul tabIndex={0} className="dropdown-content z-50 menu p-2 shadow bg-base-100 rounded-box w-52">
               <li><a>{user.displayName}</a></li>
               <li><Link to={"/login"}>
                  <button onClick={handleLogOut} className="">Sign Out</button>
