@@ -128,7 +128,7 @@ const NavBar = () => {
             //   </Link>
             // </div>
           ) : (
-            <div className="navbar-end flex items-center gap-6">
+            <div className="navbar-end flex items-center gap-3 pr-5">
               <Link to={"/login"}>
                 <button className="btn btn-primary">Log In</button>
               </Link>

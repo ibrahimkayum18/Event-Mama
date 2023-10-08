@@ -27,7 +27,7 @@ const Contact = () => {
           Contact us if you need our services. <br /> We will be happy to make
           your events memorable!
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mx-5 lg:mx-0">
           <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative" data-aos="fade-up">
             <span className="text-3xl absolute top-6  right-10">
               <FaRegAddressCard></FaRegAddressCard>
