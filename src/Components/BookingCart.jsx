@@ -3,7 +3,7 @@
 const BookingCart = ({booking}) => {
     const {name, venue, date, time, image, ticket_price, description } = booking || {}
     return (
-        <div className=" bg-sky-400 rounded-lg">
+        <div className=" bg-sky-400 rounded-lg" data-aos="zoom-in">
             <div className="">
                 <img className="w-full rounded-t-lg" src={image} alt="" />
             </div>

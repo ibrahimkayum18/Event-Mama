@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const RightSideBar = () => {
     return (
-        <div>
+        <div data-aos="flip-left">
             <div>
                 <h2 className='text-3xl font-bold px-5 mb-5'>Follow Us</h2>
                 <div className='px-5'>

@@ -12,6 +12,7 @@ const Contact = () => {
           backgroundSize: "cover",
         }}
         className="h-72 mt-14 w-full text-center "
+        data-aos="fade-up"
       >
         <h2 className="text-5xl font-bold text-orange-500 pt-20">|</h2>
         <h2 className="text-5xl font-bold text-white">
@@ -27,21 +28,21 @@ const Contact = () => {
           your events memorable!
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative">
+          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative" data-aos="fade-up">
             <span className="text-3xl absolute top-6  right-10">
               <FaRegAddressCard></FaRegAddressCard>
             </span>
             <h3 className="text-2xl font-semibold pt-7">Address</h3>
             <h2 className="text-2xl font-bold pb-7">Sonir Akhra, Dhaka</h2>
           </div>
-          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative">
+          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative" data-aos="fade-up">
             <span className="text-3xl absolute top-6  right-10">
               <FaPhone></FaPhone>
             </span>
             <h3 className="text-2xl font-semibold pt-7">Phone</h3>
             <h3 className="text-2xl font-bold pb-7">+8801700000000</h3>
           </div>
-          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative">
+          <div className="bg-sky-400 text-white rounded-br-2xl rounded-tl-2xl p-7 relative" data-aos="fade-up">
             <span className="text-3xl absolute top-6  right-10">
               <MdEmail></MdEmail>
             </span>

@@ -17,7 +17,7 @@ const Header = () => {
     },
   };
   return (
-    <>
+    <div>
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
@@ -32,7 +32,7 @@ const Header = () => {
             }}
             className="w-full h-screen flex justify-center item-center"
           >
-            <div className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
+            <div data-aos="fade-up" className="pt-28 md:pt-32 lg:pt-60 text-center space-y-5">
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Welcome to grand event
               </h2>
@@ -91,7 +91,7 @@ const Header = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

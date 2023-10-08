@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeSlider = () => {
   return (
-    <div>
+    <div >
       <h2 className="font-bold text-2xl md:text-3xl text-center mb-5">Latest Events...</h2>
       <Marquee pauseOnHover={true} gradient={true} gradientColor="skyblue" gradientWidth={50}>
         <p className="mr-5 underline text-xl font-semibold ">Country Jamboree 2023</p>

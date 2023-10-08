@@ -9,7 +9,6 @@ import auth from "../../firebase.config";
 
 const Register = () => {
     const [user, setUser] = useState(null)
-    const navigate = useNavigate()
     const location = useLocation()
 
     const navigate = useNavigate()
@@ -30,7 +29,7 @@ const Register = () => {
           return toast.error('Password did not have any uppercase character')
         }
         else if (!/[@$!%*?&]/.test(password)) {
-          return toast.error('Password did not  any special character')
+          return toast.error('Password did not have any special character')
         }
 
 
@@ -62,7 +61,7 @@ const Register = () => {
         .then(result => {
             setUser(result.user)
             toast.success('User Created Successfully')
-            
+
             navigate(location?.state ? location.state : '/')
         })
         .catch(error => {

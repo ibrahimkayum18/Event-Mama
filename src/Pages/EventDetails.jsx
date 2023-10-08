@@ -47,10 +47,10 @@ const EventDetails = () => {
     
     return (
         <div >
-            <div className="my-10">
+            <div className="my-10" data-aos="flip-top">
             <MarqueeSlider></MarqueeSlider>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 my-14 md:w-[80%] mx-auto item-center bg-base-200">
+            <div className="grid md:grid-cols-2 gap-6 my-14 md:w-[80%] mx-auto item-center bg-base-200" data-aos="flip-left">
                 <div>
                     <img className="w-full" src={image} alt="" />
                 </div>

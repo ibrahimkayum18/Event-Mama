@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeCard = ({event}) => {
     const {id, name, venue, date, time, image, titcket_price} = event
     return (
-        <div className=" h-92 rounded-lg bg-base-200 shadow-lg">
+        <div className=" h-92 rounded-lg bg-base-200 shadow-lg" data-aos="flip-left">
             <img className="w-full h-48 rounded-t-lg" src={image} alt="" />
             <div className="p-4">
             <h2 className="text-2xl ">{name}</h2>
