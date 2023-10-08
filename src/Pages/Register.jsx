@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -9,6 +9,8 @@ import auth from "../../firebase.config";
 
 const Register = () => {
     const [user, setUser] = useState(null)
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const navigate = useNavigate()
 
@@ -21,14 +23,14 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        if (password.length > 5) {
-          return toast.error('Password must be less then 6 character')
+        if (password.length < 6) {
+          return toast.error('Password must be grater than 5 character')
         }
-        else if (/[A-Z]/.test(password)) {
-          return toast.error('Password should not contain uppercase character')
+        else if (!/[A-Z]/.test(password)) {
+          return toast.error('Password did not have any uppercase character')
         }
-        else if (/[@$!%*?&]/.test(password)) {
-          return toast.error('Password should not have special character')
+        else if (!/[@$!%*?&]/.test(password)) {
+          return toast.error('Password did not  any special character')
         }
 
 
@@ -60,7 +62,8 @@ const Register = () => {
         .then(result => {
             setUser(result.user)
             toast.success('User Created Successfully')
-            navigate('/login')
+            
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error => {
             toast.error({error})
@@ -134,7 +137,7 @@ const Register = () => {
           </Link>
         </p>
         <div className="flex items-center py-2 px-6 border-2 border-blue-600 mt-5 rounded-xl gap-3 text-center justify-center">
-        <button onClick={handleGoogleLogIn} className="text-2xl text-blue-600"><FaGoogle></FaGoogle>Google</button>
+        <button onClick={handleGoogleLogIn} className="text-2xl text-blue-600 flex justify-center item-center font-semibold"><FaGoogle className="mt-1 mr-3 text-orange-400"></FaGoogle> Google</button>
         </div>
       </form>
     </div>

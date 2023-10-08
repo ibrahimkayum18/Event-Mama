@@ -41,6 +41,8 @@ const Login = () => {
         googleLogIn()
         .then(() => {
             toast.success('User Logged In Successfully')
+
+            navigate(location?.state ? location.state : '/')
         })
         .catch(err => {
             toast.error(err.message)
@@ -82,7 +84,7 @@ const Login = () => {
         
       </form>
       <div className="flex items-center py-2 px-6 border-2 border-blue-600 mt-5 rounded-xl gap-3 text-center justify-center">
-        <button onClick={handleGoogleLogIn} className="text-2xl text-blue-600"><FaGoogle></FaGoogle> Google</button>
+        <button onClick={handleGoogleLogIn} className="text-2xl text-blue-600 flex justify-center item-center font-semibold"><FaGoogle className="mt-1 mr-3 text-orange-400"></FaGoogle> Google</button>
             
         </div>
     </div>

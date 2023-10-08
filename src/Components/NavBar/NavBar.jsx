@@ -105,6 +105,7 @@ const NavBar = () => {
         <div className="navbar-end ">
           {user ? (
             <div className="flex items-center gap-6">
+              <p>{user.displayName}</p>
               <img
                 className="w-12 h-12 rounded-full"
                 src={user.photoURL}
@@ -116,7 +117,6 @@ const NavBar = () => {
             </div>
           ) : (
             <div className="navbar-end flex items-center gap-6">
-              <img className="w-12 h-12 rounded-full" src="" alt="" />
               <Link to={"/login"}>
                 <button className="btn btn-primary">Log In</button>
               </Link>
