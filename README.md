@@ -10,6 +10,7 @@
 - You can login with email and password
 - You can also signin with google
 - without login you can not accesss booked, contact, and event details
+- Live Link: https://event-mama.web.app/
 
 
 
